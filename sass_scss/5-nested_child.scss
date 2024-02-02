@@ -1,6 +1,7 @@
-/* My style */
+/* Body tag text set to #3D3D3D and first children set to #FF0000 */
 body {
-    .container {
-        color: #3D3D3D;
+    color: #3D3D3D;
+    > .red {
+        color: #FF0000;
     }
 }
