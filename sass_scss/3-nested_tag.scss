@@ -1,6 +1,8 @@
-/* My style */
+/* Assigns no padding or margin to body and margin of 10px to p tags inside body */
 body {
-    .container {
-        color: #3D3D3D;
+    margin: 0px;
+    padding: 0px;
+    p {
+        margin: 10px;
     }
 }
