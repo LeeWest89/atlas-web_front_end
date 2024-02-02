@@ -1,6 +1,8 @@
-/* My style */
-body {
-    .container {
-        color: #3D3D3D;
+/* Creating a class for each name and assisgning background image */
+@import '11-photos';
+
+@each $name in $list-names {
+    .photo-#{$name} {
+        background: image-url("photos/#{$name}.jpg") no-repeat;
     }
 }
