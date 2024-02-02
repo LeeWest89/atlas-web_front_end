@@ -1,6 +1,7 @@
-/* My style */
-body {
-    .container {
-        color: #3D3D3D;
+/* Button will change from red to green on hover */
+button {
+    color: #FF0000;
+    &:hover {
+        color: #00FF00;
     }
 }
