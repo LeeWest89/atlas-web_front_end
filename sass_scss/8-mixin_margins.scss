@@ -1,6 +1,13 @@
-/* My style */
+/* Using mixin to set margin left and right for body and div tags */
+@mixin margins($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
 body {
-    .container {
-        color: #3D3D3D;
-    }
+    @include margins(10px, 10px);
+}
+
+div {
+    @include margins(15px, 15px);
 }
