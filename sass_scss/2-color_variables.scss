@@ -1,6 +1,16 @@
-/* My style */
+/* body and p assigned texted color, body and h2 assigned background-color*/
+$textColor: #3D3D3D;
+$backgroundColor: #6D6D6D;
+
 body {
-    .container {
-        color: #3D3D3D;
-    }
+    color: $textColor;
+    background-color: $backgroundColor;
+}
+
+p {
+    color: $textColor;
+}
+
+h2 {
+    background-color: $backgroundColor;
 }
