@@ -1,4 +1,4 @@
-//
+// Creates object user
 
 const user = {
     hobby: 'Calligraphy',
