@@ -1,3 +1,5 @@
+// Displays 3 popups, one after the other
+
 var globalVariable = 'Welcome';
 
 function outer() {
