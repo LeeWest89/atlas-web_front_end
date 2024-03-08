@@ -1,4 +1,4 @@
-//
+//Use changeMode to dom manipulate webpage elements
 
 function changeMode(size, weight, transform, background, color) {
     return function() {
