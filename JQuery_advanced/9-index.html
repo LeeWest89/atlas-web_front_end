@@ -4,15 +4,21 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Task 8</title>
+        <title>Task 9</title>
+        <style>
+          .loading {
+            opacity: 0.2;
+          }
+        </style>
         <script
           src="https://code.jquery.com/jquery-3.7.1.min.js"
           integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
           crossorigin="anonymous"></script>
         <script type="application/javascript">
           $(function() {
+
             let firstLoad = true;
-            
+
             function createSearchForm() {
               $('body').append(
                 $('<input type="text">'),
@@ -29,6 +35,7 @@
             }
 
             function queryWikipedia(search, offset = 0) {
+              displayLoading(true);
               $.ajax({
                 url: 'https://en.wikipedia.org/w/api.php?origin=*',
                 data: {
@@ -45,6 +52,7 @@
                     addNewArticle(data.pageid, data.title, data.snippet);
                   }
                   buildPagination(response.query.searchinfo.totalhits, itemsPerPage, offset);
+                  displayLoading(false);
                   if (!firstLoad) {
                     $('ul li:lt(10)').remove();
                   }
@@ -73,6 +81,14 @@
                   });
                 })(i);
 
+              }
+            }
+
+            function displayLoading(loading) {
+              if (loading) {
+                $('ul').first().wrap('<div class="loading"></div>');
+              } else {
+                $('ul').first().unwrap();
               }
             }
 
