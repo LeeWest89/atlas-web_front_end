@@ -1,4 +1,4 @@
-//counts the number of primes a 100 times, calculates them at the end of the excution stack, and tell you how long it took
+//counts the number of primes a 100 times and tell you how long it took
 
 function countPrimeNumbers() {
     let primes = 0;
@@ -24,17 +24,11 @@ function countPrimeNumbers() {
     return primes;
 }
 
-let c = 0;
 let startTime = window.performance.now();
-
-for (i = 0; i < 100; i++) {
-    setTimeout(() => {
+setTimeout (function() {
+    for (i = 0; i < 100; i++) {
         countPrimeNumbers();
-        c++;
-
-        if (c === 100) {
-            let endTime = window.performance.now() - startTime;
+    }
+}, 0);
+let endTime = window.performance.now() - startTime;
 console.log(`Execution time of calculating prime numbers 100 times was ${endTime.toFixed(16)} milliseconds`);
-        }
-    }, 0);
-}
