@@ -9,7 +9,8 @@
         function setCookies() {
             const firstNameId = document.getElementById('firstname').value;
             const emailId = document.getElementById('email').value;
-            document.cookie = `firstname=${firstNameId}; email=${emailId}`;
+            document.cookie = `firstname=${firstNameId}`;
+            document.cookie = `email=${emailId}`;
         }
 
         function showCookies() {
@@ -26,7 +27,7 @@
     <input id="email" type="text" placeholder="Email">
     <button onclick="setCookies()">Log me in</button>
 
-    <h2>Cookies</h2>
+    <h1>Cookies</h1>
     <button onclick="showCookies()">Show the cookies</button>
 </body>
 </html>
