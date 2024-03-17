@@ -33,7 +33,8 @@
                   action: 'query',
                   list:'search',
                   format: 'json',
-                  srsearch: encodeURIComponent(search),
+                  srsearch: search,
+                  origin: '*'
                 },
 
                 success: function(response) {

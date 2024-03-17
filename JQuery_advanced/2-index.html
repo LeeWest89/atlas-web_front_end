@@ -9,30 +9,7 @@
         <script type="application/javascript">
           $(function() {
             function createFamilyTree() {
-              const familyTable = [
-                '<table>',
-                  '<thead>',
-                    '<tr>',
-                      '<th>Firstname</th>',
-                      '<th>Lastname</th>',
-                    '</tr>',
-                  '</thead>',
-                  '<tbody>',
-                    '<tr>',
-                      '<td>Guillaume</td>',
-                      '<td>Salva</td>',
-                    '</tr>',
-                    '<tr>',
-                      '<td>Paulette</td>',
-                      '<td>Salva</td>',
-                    '</tr>',
-                    '<tr>',
-                      '<td>Antonie</td>',
-                      '<td>Salva</td>',
-                    '</tr>',
-                  '</tbody>',
-                '</table>',
-              ]
+              const familyTable = $('<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead><tbody><tr><td>Guillaume</td><td>Salva</td></tr><tr><td>Paulette</td><td>Salva</td></tr><tr><td>Antonie</td><td>Salva</td></tr></tbody></table>');
 
               $('body').append(familyTable);
             }
