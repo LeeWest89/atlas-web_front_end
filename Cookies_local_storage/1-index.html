@@ -12,7 +12,7 @@
             const currentTime = time.getTime();
             const exp = new Date(currentTime + 10 * 24 * 60 * 60 * 1000);
             document.cookie = `firstname=${firstNameId};expires=${exp.toUTCString()}`;
-            document.cookie = `email=${emailId}; expires=${exp.toUTCString()}`;
+            document.cookie = `email=${emailId};expires=${exp.toUTCString()}`;
         }
 
         function showCookies() {
