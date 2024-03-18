@@ -10,9 +10,16 @@
     <script type="application/javascript">
 
         const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+        let itemCount = 0;
+
+        if (localStorage.getItem('itemCount')) {
+            itemCount = parseInt(localStorage.getItem('itemCount'));
+        }
 
         function addItemToCart(item) {
             window.localStorage.setItem(item, 'true');
+            itemCount++;
+            localStorage.setItem('itemCount', itemCount);
             displayCart();
         }
 
@@ -33,21 +40,13 @@
         }
 
         function displayCart() {
-            const items = Object.keys(localStorage).length;
 
-            if (items === 0) {
+            if (itemCount === 0) {
                 return;
             }
 
             const p = document.createElement('p');
-            let text;
-
-            if (items === 1) {
-                text = `You previously had ${items} item in your cart`;
-            } else {
-                text = `You previously had ${items} items in your cart`;
-            }
-            p.textContent = text;
+            p.textContent = `You previously had ${itemCount} item${itemCount > 1 ? 's' : ''} in your cart`;
             document.body.append(p);
         }
 
